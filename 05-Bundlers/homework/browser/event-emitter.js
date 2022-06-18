@@ -1,6 +1,9 @@
-(function () {
 
-  window.EventEmitter = EventEmitter;
+
+
+
+
+ // window.EventEmitter = EventEmitter;
 
   // our EventEmitter constructor function
   function EventEmitter () {
@@ -43,4 +46,13 @@
 
   };
 
-})();
+  //Common Js
+//module.exports = EventEmitter;
+
+//ES6
+export default EventEmitter;
+        
+
+
+
+
