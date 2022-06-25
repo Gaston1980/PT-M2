@@ -1,0 +1,39 @@
+
+.divSearchBar {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+    height: 70px;
+    background-color: rgb(128, 121, 121);
+    }
+    
+    .btnagregar {
+    background-color: white;
+    height: 50px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: black solid 3px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    }
+    .btnagregar:hover {
+    background-color:  rgb(128, 121, 121);
+    }
+    
+    
+    
+    .input {
+    width: 450px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border:black;
+    }
+
