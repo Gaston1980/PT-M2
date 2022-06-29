@@ -20,7 +20,7 @@
      this.state = {
        contador: this.props.contador
       }
-      this.variable = this.props.contador
+      this.variable = this.props.contador // no se va a re renderizar cuando se efectue un cambio xq no es una prop ni es un cambio de estado
       this.incrementoContador= this.incrementoContador.bind(this);
     }
     
@@ -48,6 +48,7 @@
             <button onClick={this.incrementoContador}>Incrementa!</button>  
             </div>
             </div>
+            
             )
     }
   };

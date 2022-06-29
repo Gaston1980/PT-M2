@@ -1,0 +1,31 @@
+
+
+.nav {
+  display: flex;
+  height: 80px;
+ 
+}
+
+.LogoHenry {
+  display: flex;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+
+}
+
+
+
+
+.spanNav {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 180px;
+  font-weight: bold;
+  color: white;
+  
+
+}

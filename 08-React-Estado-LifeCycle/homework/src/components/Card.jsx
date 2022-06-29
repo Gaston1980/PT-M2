@@ -1,28 +1,38 @@
 import React from 'react';
-import './Card.css';
+import styles from "./card.module.css"
+// usando props //
+/* export default function Card(props) {
+  // acá va tu código
+  return (
+  <div>
+      <button onClick={props.onClose} >
+        X 
+      </button>
+      <h3> {props.name}</h3>
+      <h5> Min </h5>
+      <div> {props.min}</div>
+      <h5> Max </h5>
+      <div> {props.max}</div>
+      <img scr={`http://openweathermap.org/img/wn/${props.img}@2x.png`} alt="" />
+  </div>
+  )
+};*/
 
-export default function Card ({min, max, name, img, onClose, id}) {
-    return (
-      <div className="card">
-        <div id="closeIcon" className="row">
-            <button onClick={onClose} className="btn btn-sm btn-danger">X</button>
-        </div>
-        <div className="card-body">
-          <h5 className="card-title">{name}</h5>
-          <div className="row">
-            <div className="col-sm-4 col-md-4 col-lg-4">
-              <p>Min</p>
-              <p>{min}°</p>
-            </div>
-            <div className="col-sm-4 col-md-4 col-lg-4">
-              <p>Max</p>
-              <p>{max}°</p>
-            </div>
-            <div className="col-sm-4 col-md-4 col-lg-4">
-              <img className="iconoClima" src={"http://openweathermap.org/img/wn/"+img+"@2x.png"} width="80" height="80" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-};
+
+// usando extractoring en vez de props //
+
+export default function Card({max, min, name, onClose,img, id}) { // traigo directamente el nombre de las propiedades que voy a usar ( me fijo en el componente padre que se va renderizar y que propiedades esta usando en Card)
+  return (
+  <div className={`${styles.divCard}`}>
+      <button className={`${styles.btnx}`} onClick={() => onClose(id)}>
+        X 
+      </button>
+      <h3 className={`${styles.cityh3}`}>{name}</h3>
+      <h5 className={`${styles.minh5}`} > Min </h5>
+      <div className={`${styles.mindiv}`}>{min}°</div>
+      <h5 className={`${styles.maxh5}`}> Max </h5>
+      <div className={`${styles.maxdiv}`}>{max}°</div>
+      <img className={styles.weatherIcon} src={"http://openweathermap.org/img/wn/"+img+"@2x.png"} alt=""/> 
+  </div>
+  )
+}; 

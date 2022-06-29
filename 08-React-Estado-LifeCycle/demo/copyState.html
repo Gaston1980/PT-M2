@@ -13,21 +13,21 @@
   <script type="text/babel">
 
     class Children extends React.Component {
-      constructor(props) {
-        super(props);
-        this.state = {
-          title: this.props.title
-        };
-      }
+      // constructor(props) {     // todo esto comentado no hace falta poner
+      //  super(props);
+      //  this.state = {
+      //    title: this.props.title
+      //  };
+      // }
 
-      render(){
+      render(){   // aca se modifico en el <h2> this.state.title por this.props.title
         return (
           <div>
-            <h2>{this.state.title}</h2>
+         <h2>{this.props.title}</h2> 
           </div>
         )
       }
-    };
+    }; // ahora si va renderizar el cambio del <h2>, con la version anterior no se renderizaba al nuevo valor
 
   class App extends React.Component {
     constructor(props) {
