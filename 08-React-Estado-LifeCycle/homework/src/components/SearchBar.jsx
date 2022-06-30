@@ -19,15 +19,15 @@ const [ city, setCity] = useState(""); // creo un estado "city" y su metodo para
     
     /> 
     <button className={`${styles.btnagregar}`} 
-    onClick={() => onSearch(city) } value={""} > Agregar </button>
-    
+    onClick={() => { onSearch(city); setCity("") }} > Agregar  </button>
+   
 
   </div>
   )
 };
 // NOTA : value={city} Vinculamos el Input con el estado.....va a ir guardando dentro del estado city, lo que el usuario vaya tipeando en el input
 //        onChange={handleInputChange} es un escuchador de evento de cambios en mi input, cuando suceda ejecuta la funcion que le paso
-
+ //         setCity("") lo uso para limpiar el input luego de buscar la ciudad
 
 
 
