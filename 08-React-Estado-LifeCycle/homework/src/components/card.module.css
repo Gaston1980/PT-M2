@@ -36,10 +36,14 @@
      color:black;
      font-weight: bolder;
      position: relative;
- 
- 
- 
+     text-decoration: none;
  }
+ .cityh3:hover {
+    text-decoration: underline black;
+ 
+    }
+ 
+ 
  
  .minh5 {
      font-size: 30px;

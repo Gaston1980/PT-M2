@@ -3,22 +3,13 @@
 
 .App {
   text-align: center;
-  background-size: cover;
-  background-image: url("https://scx2.b-cdn.net/gfx/news/2018/1-whytheweathe.jpg");
+  
 }
 
 .divCard {
   display:none;
   }
-  .divNavbar {
-    display: flex;
-    justify-content: flex-start;
-    background-color: rgb(94, 89, 89);
-    height: fit-content;
   
-    
- 
-  }
 
 .App-logo {
   height: 40vmin;

@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from "./card.module.css"
+import {Link} from "react-router-dom";
+
 // usando props //
 /* export default function Card(props) {
   // acá va tu código
@@ -27,7 +29,9 @@ export default function Card({max, min, name, onClose,img, id}) { // traigo dire
       <button className={`${styles.btnx}`} onClick={() => onClose(id)}>
         X 
       </button>
+      <Link to={`/ciudad/${id}`}>
       <h3 className={`${styles.cityh3}`}>{name}</h3>
+      </Link>
       <h5 className={`${styles.minh5}`} > Min </h5>
       <div className={`${styles.mindiv}`}>{min}°</div>
       <h5 className={`${styles.maxh5}`}> Max </h5>

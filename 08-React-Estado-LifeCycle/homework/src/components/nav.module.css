@@ -1,8 +1,10 @@
 
 
 .nav {
-  display: flex;
-  height: 80px;
+    display: flex;
+    justify-content:flex-start;
+    background-color: rgb(94, 89, 89);
+    height: fit-content;
  
 }
 
@@ -23,9 +25,47 @@
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+
+  width: fit-content;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+  
+.spanAbout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 1000px;
   width: 180px;
+  height: 50px;
   font-weight: bold;
   color: white;
+  font-size: larger;
+ 
   
-
 }
+.spanAbout:hover {
+color:black;
+text-decoration: underline black;
+}
+
+.spanHome{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 180px;
+  height: 50px;
+  font-weight: bold;
+  color: white;
+  font-size: larger;
+}
+
+.spanHome:hover {
+  color:black;
+  text-decoration: underline black;
+  }
+  

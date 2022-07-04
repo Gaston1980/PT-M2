@@ -1,0 +1,32 @@
+.container {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    border: black solid 5px;
+    border-radius: 15px;
+    width: 500px;
+    height: 512px;
+}
+
+
+
+.cityname {
+    display: block;
+    position: relative;
+    top: 15px;
+     font-size: 60px;
+     color:black;
+     font-weight: bolder;
+
+}
+
+
+
+
+.info {
+     font-size: 30px;
+     font-weight: bold;
+     color: black;
+     display: block;
+     position: relative;
+     top: 50px;
+}

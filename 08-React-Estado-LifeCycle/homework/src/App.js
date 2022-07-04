@@ -2,8 +2,10 @@ import React, {useState} from 'react';
 import './App.css';
 import Cards from './components/Cards.jsx';
 import Nav from "./components/Nav.jsx"
-
-
+import About from "./components/About.jsx";
+import { BrowserRouter as Router } from 'react-router-dom';
+import {Route} from "react-router-dom";
+import Ciudad from "./components/Ciudad.jsx";
 const apiKey = "9dafdc355bdd412a689aa7d3b3f5ed10" // defino mi apikey para acceder al weather api
 
 export default function App() {
@@ -43,20 +45,46 @@ export default function App() {
     setCities(oldcities => oldcities.filter(elem => elem.id !==id)) // filtro el estado cities y todos los elementos que tengan el id disitnot al que me pasan x parametro se quedan y el que es igual queda afuera del estado, se elmina.
    }                                                                // el metodo filter retorna un nuevo array (estado cities) con el elemento filtrado
 
+   function onFilter(ciudadId) {
+    let ciudad = cities.filter(elem => elem.id === parseInt(ciudadId));
+    if(ciudad.length > 0) {
+        return ciudad[0];
+    } else {
+        return null;
+    }
+  }
+
+
   return (
-    
+    <Router>
     <div className="App">
-      <div className="divNavbar">
-        <Nav 
-          onSearch={onSearch} // le paso la funcion definida arriba
+    <Route
+    path="/"
+    render={() => <Nav onSearch={onSearch}  />}
+    /> 
+       
+       
+        <Route
+        path='/about'
+        component={About}
         />
-      </div>
-      
-        <Cards
-          cities={cities}
-          onClose={onClose}
+       
+        
+         
+        <Route
+        exact path="/"
+        render={() => <Cards cities={cities} onClose={onClose} />}
         /> 
+      <Route exact path='/ciudad/:ciudadId' render={({match}) =>
+        <Ciudad city={onFilter(match.params.ciudadId)}/>
+      }> 
+      </Route>
+
+
+
     </div>
+
+    </Router>
   );
   }
 
