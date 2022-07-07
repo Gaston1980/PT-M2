@@ -4,6 +4,9 @@ export default function Form() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+
+
   function validateUser(value) {
     if(!/\S+@\S+\.\S+/.test(value)) {
       setError('el usuario tiene que ser un email');
@@ -14,9 +17,9 @@ export default function Form() {
   }
   return (
       <form>
-        <input className={error && 'danger'}
+        <input className={error && 'danger'} // aca digo si hay error, osea error no esta vacio, aplicar la clase de estilos "danger"
           name="username" value={username} placeholder="username" onChange={(e) => validateUser(e.target.value)}/>
-        {!error ? null : <span>{error}</span>}
+        {!error ? null : <span>{error}</span>}   
         <input name="password" value={password} placeholder="password" type="password" onChange={(e) => setPassword(e.target.value)}/>
         <input type="submit" />
       </form>
