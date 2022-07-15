@@ -12,31 +12,32 @@ class AppClass extends React.Component {
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleResize = this.handleResize.bind(this);
   }
-
+// se ejecuta despues del 1° renderizado del componente y nunca mas
   componentDidMount() {
     document.title = this.state.name;
     window.addEventListener('resize', this.handleResize)
   }
-
+// se ejecuta despues de cada re-renderizado (porque hubo cambio de props o estado)
   componentDidUpdate() {
     document.title = this.state.name;
   }
-
+// se ejeucta antes del desmonte del componente
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize)
   }
 
-  handleResize() {
+  handleResize() { // si declaro los metodos con arrow function no es necesario luego bindearlos
     this.setState({
       width: window.innerWidth
     })
   }
 
-  handleNameChange(e) {
+  handleNameChange(e) { // // si declaro los metodos con arrow function no es necesario luego bindearlos
     this.setState({
       name: e.target.value
     })
   }
+
   render() {
     return (
       <div className="App">
